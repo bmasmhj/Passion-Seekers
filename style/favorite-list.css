@@ -1,0 +1,35 @@
+.favorite__list {
+   margin: 60px auto 20px auto;
+   width: 70%;
+}
+
+.favorite__list__title{
+   margin-top:70px;
+   margin-bottom: 10px;
+}
+
+.favorite__list__container {
+   width: auto;
+}
+
+.favorite_list__description__more {
+   color: var(--blue);
+   text-decoration: underline;
+}
+
+.favorite_list__description__delete {
+   color: rgb(201, 13, 13);
+}
+
+.favorite__list__table__head th {
+   padding: 10px;
+}
+
+.favorite__list__table__body tr td {
+   padding: 8px;
+   text-align: center;
+}
+
+.favorite__list__table__body__text {
+   text-align: left !important;
+}

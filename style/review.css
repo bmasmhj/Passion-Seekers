@@ -1,0 +1,69 @@
+.review__section {
+   background: rgb(216, 216, 216);
+   border-radius: 20px;
+   margin: 75px auto 20px auto;
+   padding: 20px;
+   width: 40%;
+}
+
+.review__form__group {
+   padding: 8px;
+}
+
+
+.review__form__group label {
+   font-size: 1.5rem;
+   display: block;
+}
+
+.review__form__group input {
+   padding: 10px;
+   width: 100%;
+}
+
+.review__form__group textarea {
+   overflow: scroll;
+   padding: 10px;
+   resize: vertical;
+   width: 100%;
+}
+
+.review__section__submit {
+   background: rgb(53, 157, 204);
+   border: none;
+   border-radius: 4px;
+   background: linear-gradient(100deg, rgba(53, 157, 204, 1) 22%, rgba(73, 169, 219, 0.8435749299719888) 48%, rgba(57, 140, 200, 0.8603816526610644) 72%, rgba(80, 147, 193, 0.835171568627451) 99%);
+   cursor: pointer;
+   font-size: 1.2rem;
+   padding: 10px;
+   transition: all 0.3s ease;
+   width: 100%;
+}
+
+.review__section__submit:hover {
+   transform: scale(1.04);
+}
+
+/* for Review View */
+
+.review__list {
+   background: rgb(216, 216, 216);
+   margin: 70px auto 20px auto;
+   width: 40%;
+}
+
+.review__list__container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 10px;
+}
+
+.review__list__head th{
+   padding: 8px;
+}
+
+.review__list__body td{
+   padding: 8px;
+   text-align: center;
+}

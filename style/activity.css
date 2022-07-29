@@ -1,0 +1,118 @@
+/* Activity */
+
+.activity {
+   width: 90vw;
+   margin: 0 auto;
+}
+
+.activity h2 {
+   margin: 0;
+}
+
+.activity_content_blogs {
+   display: grid;
+   gap: 5px;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(5, 1fr);
+   width: inherit;
+}
+
+.activity_content_blog {
+   background-color: #2f7cc4;
+   position: relative;
+   overflow: hidden;
+}
+
+.activity_content_blog_image {
+   width: 100%;
+   height: 100%;
+}
+
+.activity_content_blog_image img {
+   width: 100%;
+   height: 100%;
+   display: block;
+   object-fit: cover;
+}
+
+.activity_content_blog_info {
+   color: #fff;
+   transform: translateY(150%);
+   background-color: rgba(0, 0, 0, .6);
+   left: 0;
+   padding: 5px 0 0 25px;
+   transition: all ease 0.6s;
+   bottom: 0;
+   position: absolute;
+   right: 0;
+}
+
+.activity_content_blog:hover .activity_content_blog_info {
+   height: 100%;
+   padding: 25px;
+   transform: translateY(0);
+   width: 100%;
+}
+
+.activity_content_blog_info p,
+.activity_content_blog_info h2 {
+   transition: all ease 0.6s;
+}
+
+.activity_content_blog--big .activity_content_blog_info {
+   bottom: 0px;
+   transform: translateY(366px);
+}
+
+.activity_content_blog--big .activity_content_blog_info p {
+   max-width: 350px;
+}
+
+.activity_blog_more {
+   color: #999;
+   text-decoration: underline;
+}
+
+.activity_content_blog:nth-child(1) {
+   grid-area: 1 / 1 / 2 / 2;
+}
+
+.activity_content_blog:nth-child(2) {
+   grid-area: 1 / 2 / 2 / 3;
+}
+
+.activity_content_blog:nth-child(3) {
+   grid-area: 1 / 3 / 3 / 5;
+}
+
+.activity_content_blog:nth-child(4) {
+   grid-area: 2 / 1 / 4 / 3;
+}
+
+.activity_content_blog:nth-child(5) {
+   grid-area: 3 / 3 / 4 / 4;
+}
+
+.activity_content_blog:nth-child(6) {
+   grid-area: 3 / 4 / 4 / 5;
+}
+
+.activity_content_blog:nth-child(7) {
+   grid-area: 4 / 3 / 6 / 5;
+}
+
+.activity_content_blog:nth-child(8) {
+   grid-area: 4 / 2 / 5 / 3;
+}
+
+.activity_content_blog:nth-child(9) {
+   grid-area: 5 / 2 / 6 / 3;
+}
+
+.activity_content_blog:nth-child(10) {
+   grid-area: 5 / 1 / 6 / 2;
+}
+
+.activity_content_blog:nth-child(11) {
+   grid-area: 4 / 1 / 5 / 2;
+}

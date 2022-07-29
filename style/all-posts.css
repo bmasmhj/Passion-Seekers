@@ -1,0 +1,60 @@
+.all__posts {
+   margin-top: 64px;
+}
+
+.all__posts__contents {
+   width: 90%;
+   margin: 0 auto;
+}
+
+
+.all__posts__contents__head th {
+   padding: 8px;
+}
+
+
+.all__posts__contents__content td {
+   padding: 6px;
+   text-align: center;
+}
+
+.all__posts__contents__content__left {
+   text-align: left !important;
+}
+
+.all__posts__contents__content__edit,
+.all__posts__contents__content__more {
+   color: var(--blue);
+}
+
+.all__posts__contents__content__more{
+   text-decoration: underline;
+}
+
+.all__posts__contents__content__remove {
+   color: rgb(180, 4, 4);
+}
+
+.page__numbers{
+   padding: 20px;
+   text-align: right;
+   width: 95%;
+}
+
+.page__number{
+   display: inline;
+}
+
+.page__number a{
+   border: 1px solid  black;
+   padding: .5rem ;
+}
+
+.page__number:hover a{
+   background-color: cornflowerblue;
+}
+
+.page__number--active a{
+   background-color: var(--blue);
+   cursor: default;
+}

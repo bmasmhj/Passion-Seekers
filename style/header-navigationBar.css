@@ -1,0 +1,154 @@
+/* Navigation Bar */
+/* this is demo */
+header {
+   max-width: 100vw;
+}
+
+header nav {
+   overflow: hidden;
+   display: flex;
+   padding: 10px 20px;
+   justify-content: space-between;
+   background-color: var(--blue);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   z-index: 10;
+}
+
+.website__name{
+   position: relative;
+}
+
+.website__name a{
+   color: white;
+   text-shadow: 0px 0px 5px black;
+}
+
+.website__user__type{
+   color: #E1ECF8;
+   font-size: 1rem;
+   font-style: italic;
+   position: absolute;
+   pointer-events:none;
+}
+
+.search__posts form {
+   align-items: center;
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: center;
+   margin: auto 0;
+}
+
+.search__posts button {
+   cursor: pointer;
+   background: transparent;
+   border: none;
+   display: block;
+   margin: auto 0 auto 10px;
+   padding: 10px;
+}
+
+.search__posts form button img {
+   width: 20px;
+   height: 20px;
+   filter: invert();
+}
+
+.search__form__field {
+   border-radius: 4px;
+   border: none;
+   margin: auto 0;
+   transform: scale(0);
+   transition: all ease 0.3s;
+   padding: 8px;
+   width: 300px;
+}
+
+
+.search__form__field--display {
+   transform: scale(1);
+}
+
+.search__form__btn__submit {
+   display: none;
+}
+
+.search__form__btn__submit--show {
+   display: block;
+}
+
+
+nav h1 {
+   font-size: 2rem;
+   padding-left: 25px;
+   cursor: pointer;
+   color: white;
+   margin: auto 0;
+}
+
+nav h1:hover {
+   color: white;
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.logout__btn {
+   position: relative;
+}
+
+.logout__btn p {
+   background-color: rgba(0, 0, 0, 0.6);
+   border-radius: 10px;
+   bottom: 20%;
+   color: white;
+   position: absolute;
+   padding: 6px;
+   right: 105%;
+   transform:
+      scale(0) translateX(50%);
+
+   z-index: 1;
+   transition: all ease-in 0.2s;
+}
+
+.logout__btn button {
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+   padding: 11px;
+   outline: none;
+}
+
+.logout__btn button:hover img{
+   filter: saturate(100%);
+}
+
+nav ul .logout__btn button:hover+p {
+   transform:
+      scale(1) translateX(0%);
+}
+
+.logout__img img {
+   filter: invert();
+}
+
+nav ul li a {
+   padding: 19px;
+   color: white;
+   transition: all 0.3s ease-out;
+   font-size: 16px;
+   font-weight: 600;
+}
+
+nav ul li a:hover{
+   background-color: #26649e;
+}

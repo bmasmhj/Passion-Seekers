@@ -1,0 +1,128 @@
+/* explore */
+
+.explore {
+   width: 90vw;
+   margin: 0 auto;
+}
+
+.explore h2 {
+   margin: 0;
+}
+
+.explore_content_blogs {
+   display: grid;
+   gap: 5px;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(5, 1fr);
+   width: inherit;
+}
+
+.explore_content_blog {
+   background-color: #2f7cc4;
+   position: relative;
+   overflow: hidden;
+}
+
+.explore_content_blog_image {
+   width: 100%;
+   height: 230px;
+}
+
+.explore_content_blog_image img {
+   width: 100%;
+   height: 100%;
+   display: block;
+   object-fit: cover;
+}
+
+.explore_content_blog_info {
+   color: #fff;
+   transform: translateY(150%);
+   background-color: rgba(0, 0, 0, .7);
+   /* left: 0; */
+   padding: 5px 0 0 25px;
+   transition: all ease .6s;
+   bottom: 0;
+   position: absolute;
+   /* right: 0; */
+}
+
+.explore_content_blog:hover 
+.explore_content_blog_info {
+   height: 100%;
+   padding: 25px;
+   transform: translateY(0);
+   width: 100%;
+}
+
+.explore_content_blog_info p,
+.explore_content_blog_info h2 {
+   transition: all ease 0.6s;
+}
+
+.explore_content_blog--big 
+.explore_content_blog_info {
+   bottom: 0px;
+   left: 0;
+   right: 0;
+   transform: translateY(372px);
+}
+
+.explore_content_blog--big 
+.explore_content_blog_info p {
+   max-width: 350px;
+}
+
+.explore_content_blog--big 
+.explore_content_blog_image{
+   height: 465px;
+}
+
+.explore_blog_more {
+   color: #999;
+   text-decoration: underline;
+}
+
+.explore_content_blog:nth-child(1) {
+   grid-area: 1 / 1 / 2 / 2;
+}
+
+.explore_content_blog:nth-child(2) {
+   grid-area: 1 / 2 / 2 / 3;
+}
+
+.explore_content_blog:nth-child(3) {
+   grid-area: 1 / 3 / 3 / 5;
+}
+
+.explore_content_blog:nth-child(4) {
+   grid-area: 2 / 1 / 4 / 3;
+}
+
+.explore_content_blog:nth-child(5) {
+   grid-area: 3 / 3 / 4 / 4;
+}
+
+.explore_content_blog:nth-child(6) {
+   grid-area: 3 / 4 / 4 / 5;
+}
+
+.explore_content_blog:nth-child(7) {
+   grid-area: 4 / 3 / 6 / 5;
+}
+
+.explore_content_blog:nth-child(8) {
+   grid-area: 4 / 2 / 5 / 3;
+}
+
+.explore_content_blog:nth-child(9) {
+   grid-area: 5 / 2 / 6 / 3;
+}
+
+.explore_content_blog:nth-child(10) {
+   grid-area: 5 / 1 / 6 / 2;
+}
+
+.explore_content_blog:nth-child(11) {
+   grid-area: 4 / 1 / 5 / 2;
+}

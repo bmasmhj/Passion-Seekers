@@ -1,0 +1,30 @@
+.admin__request__list {
+   margin-top: 64px;
+   width: 100%;
+}
+
+.admin__request__list__table {
+   width: 90%;
+   margin: 0 auto;
+}
+
+.admin__request__list__contents__head th {
+   padding: 6px;
+}
+
+.admin__request__list__contents td {
+   padding: 8px;
+   text-align: center;
+}
+
+.admin__request__list__contents__button:hover {
+   text-decoration: underline;
+}
+
+.admin__request__list__contents__button--accept {
+   color: green;
+}
+
+.admin__request__list__contents__button--decline {
+   color: red;
+}

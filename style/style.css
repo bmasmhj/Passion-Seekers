@@ -1,0 +1,81 @@
+/* imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+/* Root */
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+:root {
+   --blue: #2f7cc4;
+   --dark-blue:#14436e;
+   --background-color:rgb(238, 234, 234);
+}
+
+body {
+   font-family: 'Roboto Condensed',sans-serif;
+   font-size: 1rem;
+   background-color:var(--background-color) ;
+   /* overflow-x: hidden; */
+}
+
+a {
+   color: black;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+hr {
+   width: 100%;
+   margin: 20px 0;
+}
+
+.tag {
+   color: rgba(133, 132, 132, 0.74);
+}
+
+h2 {
+   margin-left: 50px;
+}
+
+p {
+   line-height: 1.4;
+}
+
+.recommendation>h2,
+.explore>h2,
+.activity>h2 {
+   padding-bottom: 30px;
+}
+
+.end__of__page{
+   background-color: var(--blue);
+   height: 6px;
+   width: 100%;
+}
+
+.end__of__page--absolute{
+   bottom: 0;
+   position: absolute;
+   left: 0;
+   right: 0;
+}
+
+.end__of__page--fixed{
+   bottom: 0;
+   position: fixed;
+   left: 0;
+   right: 0;
+}
+
+pre {
+   overflow-x: auto;
+   white-space: pre-wrap;
+   white-space: -moz-pre-wrap;
+   white-space: -pre-wrap;
+   white-space: -o-pre-wrap;
+   word-wrap: break-word;
+}

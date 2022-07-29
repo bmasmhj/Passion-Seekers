@@ -1,0 +1,54 @@
+.location__information{
+   background-color: rgb(214, 211, 211);
+   border-radius: 5px;
+   margin:50px auto 10px auto;
+   padding: 20px;
+   overflow: hidden;
+   width: 40rem;
+}
+
+.location__information__title{
+   font-size: 2rem;
+}
+
+.location_information_upload_form_item label{
+   display: block;
+   font-size: 1.5rem;
+}
+
+.location_information_upload_form_item{
+   padding: 10px;
+}
+
+.location_information_upload_form_item input,
+.location_information_upload_form_item textarea{
+   display: block;
+   font-size: .9rem;
+   margin-left: 10px;
+   padding: 8px;
+   width: 100%;
+}
+
+.location_information_upload_form_item textarea{
+   resize: none;
+   height: 18rem;
+   overflow: scroll;
+}
+
+.location_information_upload_form_item__submit{
+   background: linear-gradient(100deg, rgba(53, 157, 204, 1) 22%, rgba(73, 169, 219, 0.8435749299719888) 48%, rgba(57, 140, 200, 0.8603816526610644) 72%, rgba(80, 147, 193, 0.835171568627451) 99%);
+   border: none;
+   color: black;
+   cursor: pointer;
+   display: block;
+   font-size: 1.2rem;
+   margin: 0 auto;
+   padding: 8px;
+   transition: all 0.5s ease;
+   width: 90%;
+}
+
+.location_information_upload_form_item__submit:hover{
+   background: linear-gradient(100deg, rgba(53, 157, 204, 1) 22%, rgba(73, 169, 219, 0.8435749299719888) 48%, rgba(57, 140, 200, 0.8603816526610644) 72%, rgba(80, 147, 193, 0.835171568627451) 99%);
+   width: 100%;
+}

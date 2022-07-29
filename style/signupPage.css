@@ -1,0 +1,200 @@
+
+/* conatiner */
+
+body{
+   width: 100vw;
+   background-color:white;
+}
+
+.container{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   /* padding: 20px; */
+}
+
+
+.container__left,
+.container__right{
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   padding: 20px;
+   position: fixed;
+   top: 100;
+   right:0;
+   bottom: 0;
+   width: 50%;
+}
+
+.container__left{
+   top: 0;
+   left: 0;
+   background: rgb(53,157,204);
+   background: linear-gradient(100deg, rgba(53,157,204,1) 22%, rgba(73,169,219,0.8435749299719888) 48%, rgba(57,140,200,0.8603816526610644) 72%, rgba(80,147,193,0.835171568627451) 99%);
+}
+
+.container__left__home__logo{
+   display: inline-block;
+   padding-left: 20px;
+}
+
+.container__left__home__logo a{
+   background: white;
+   border-radius: 3px;
+   display: inline-block;
+   overflow: hidden;
+   padding: 5px;
+   transition: all ease 0.2s;
+}
+.container__left__home__logo a:hover{
+   background: rgba(0, 0, 0, 0);
+   transform: scale(1.15);
+}
+
+.container__left__home__logo a:hover img{
+   filter:invert();
+}
+
+.container__left__home__logo__img{
+   max-width: 30px;
+   max-height: 30px;
+   display: inline-block;
+   object-fit: cover;
+}
+
+.container__left__logo__info{
+   padding: 30px;
+}
+
+.container__left__logo__info h3 {
+   font-size: 6rem;
+}
+
+
+.container__left__logo__info h3:nth-child(2) {
+   margin-left: 40px;
+}
+
+.container__left__logo__info p {
+   font-size: 1.5rem;
+   font-style: italic;
+   margin-left: 40px;
+}
+
+
+.container__left__short__info{
+   width: 100%;
+   overflow: hidden;
+   display: block;
+}
+
+.container__left__short__info__list{
+   display: flex;
+   margin-left: 70px;
+   margin-top: 20px;
+}
+
+.container__left__short__info__img{
+   display: inline;
+}
+
+.container__left__short__info__img img{
+   display: inline;
+   height: 40px;
+   width: 40px;
+}
+
+.container__left__short__info__list p{
+   display: inline;
+   font-size: 1.2rem;
+   padding-left: 20px;
+   margin: auto 0;
+}
+
+/* container__right */
+
+.container__right{
+   padding-top: 40px;
+   position: absolute;
+}
+
+.container__right__form_signup__form hr{
+   margin: 0;
+}
+
+.container__right__form_signup > h2{
+   font-size: 4rem;
+   margin: 0;
+}
+
+.container__right__form_signup__form{
+   margin-left:30px ;
+   padding:0px 40px;
+}
+
+.container__right__form__element{
+   padding-top: 15px;
+}
+
+.container__right__form__element Label{
+   display: block;
+   font-size: 1.3rem;
+}
+
+.container__right__form__element .validation__input,
+.container__right__form__element input
+ {
+   border: 1px solid black;
+   border-radius: none;
+   outline: none;
+   font-size: 1rem;
+   margin-left: 10px;
+   padding: 8px;
+   width: 100%;
+}
+
+.validation__input {
+   outline: none;
+   border: 1px solid black;
+}
+
+.validation__input--empty {
+   border: 1px solid red !important;
+   border-radius: none;
+}
+
+.container__right__form__element--checkbox Label{
+   display: inline-block;
+   cursor: pointer;
+}
+
+.container__right__form__element--checkbox input{
+   cursor: pointer;
+   display: inline-block;
+   width: auto;
+   border-radius:0;
+}
+
+.container__right__form__element--signup__btn{
+   /* padding: 20px; */
+   width: 100%;
+   margin: 0 auto;
+}
+
+.container__right__form__element--signup__btn input{
+   background: rgb(53,157,204);
+   border-radius: 4px;
+   background: linear-gradient(100deg, rgba(53,157,204,1) 22%, rgba(73,169,219,0.8435749299719888) 48%, rgba(57,140,200,0.8603816526610644) 72%, rgba(80,147,193,0.835171568627451) 99%);
+   border: none;
+   cursor: pointer;
+   color: white;
+   font-weight: 700;
+   font-size: 1.3rem;
+   transition: all ease 0.3s;
+   padding: 10px;
+}
+
+.container__right__form__element--signup__btn input:hover{
+   transform: scale(1.04);
+}

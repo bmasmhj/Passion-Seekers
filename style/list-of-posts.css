@@ -1,0 +1,23 @@
+.page__numbers{
+   padding: 20px;
+   text-align: right;
+   width: 95%;
+}
+
+.page__number{
+   display: inline;
+}
+
+.page__number a{
+   border: 1px solid  black;
+   padding: .5rem ;
+}
+
+.page__number:hover a{
+   background-color: cornflowerblue;
+}
+
+.page__number--active a{
+   background-color: var(--blue);
+   cursor: default;
+}

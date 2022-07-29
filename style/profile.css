@@ -1,0 +1,104 @@
+.user__information {
+   background: rgb(207, 206, 206);
+   border-radius: 5px;
+   padding: 30px 20px;
+   margin: 80px auto 20px auto;
+   width: 450px;
+}
+
+.user__information__details {
+   text-align: center;
+}
+
+.users__information__detail {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+   display: block;
+   transition: all 0.3s ease;
+   padding: 10px 0;
+}
+
+.users__information__detail label,
+.user__information__details__title {
+   display: block;
+   text-align: left;
+   margin-left: 0;
+}
+
+
+.user__information__avatar {
+   border: 3px solid black;
+   border-radius: 50%;
+   height: 150px;
+   margin: 0 auto;
+   position: relative;
+   overflow: hidden;
+   width: 150px;
+}
+
+.user__information__avatar__label {
+   bottom: 0;
+   background: rgba(0, 0, 0, 0.493);
+   color: white;
+   cursor: pointer;
+   font-size: 1rem !important;
+   height: 45px;
+   position: absolute;
+   padding: 10px;
+   left: 0;
+   transition: all ease 0.3s;
+   text-align: center !important;
+   right: 0;
+   width: 100%;
+}
+
+.user__information__avatar__label:hover {
+   background: rgba(22, 154, 231, 0.781);
+}
+
+.user__information__avatar img {
+   width: 100%;
+   height: 100%;
+}
+
+.users__information__detail label {
+   font-size: 1.4rem;
+   transition: all 0.3s ease;
+}
+
+.users__information__detail input {
+   background: transparent;
+   border: none;
+   border-radius: 2px;
+   padding: 8px;
+   transition: all 0.3s ease;
+   width: 100%;
+}
+
+.users__information__detail input:hover {
+
+   font-size: 1.17rem;
+   cursor: pointer;
+}
+
+.users__information__detail input:focus,
+.input--focus {
+   background: white !important;
+   border: default;
+}
+
+.user__information__details__update__btn {
+   border: none;
+   background: rgb(53, 157, 204);
+   background: linear-gradient(100deg, rgba(53, 157, 204, 1) 22%, rgba(73, 169, 219, 0.8435749299719888) 48%, rgba(57, 140, 200, 0.8603816526610644) 72%, rgba(80, 147, 193, 0.835171568627451) 99%);
+   color: white;
+   cursor: pointer;
+   font-size: 1.1rem;
+   outline: none;
+   padding: 10px;
+   transition: all ease 0.3s;
+   width: 100%;
+}
+
+.user__information__details__update__btn:hover {
+   transform: scale(1.04);
+}
