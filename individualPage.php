@@ -30,6 +30,7 @@ require_once './__loginAndSignupErrorMsg.php';
       }
    </script>
    <?php
+   $err = [];
    if (isset($_GET['id']) && !empty($_GET['id']) && is_numeric($_GET['id'])) {
       $id = $_GET['id'];
       $query = mysqlGetPost($_GET['id']);
@@ -158,7 +159,7 @@ require_once './__loginAndSignupErrorMsg.php';
                                  }else{
                                     $ussnmm ='';
                                  }
-                                  if (isset($_SESSION['admin']) || $ussnmm == $comment['username']) { ?>
+                                  if (isset($_SESSION['admin']) || $ussnmm == $comment['username'] ) { ?>
                                     <div class="post__comment__remove__comment">
                                        <a href="./__delete.php?<?php echo "id=" . $id . "&removeCommentId=" . $comment['id']; ?>">&#9747;</a>
                                     </div>
@@ -213,30 +214,16 @@ require_once './__loginAndSignupErrorMsg.php';
 
    </div>
 
+
+   <section>
    <div class="recommendation recommendation--small">
-      <h2>Recommendations</h2>
-      <ul class="recommendation__list">
-         <?php
-         $countOfRecomendations = 3;
-         include './__recommendations.php';
-         ?>
-         <?php foreach ($recomendationOfPosts as $recPost) { ?>
-            <li class="recommendation__list__item">
-               <a href="<?php echo "./individualPage.php?id=" . $recPost['id']; ?>">
-                  <div class="recommendation__list__item_images">
-                     <img src="<?php echo './images/posts/' . $recPost['image'] ?>" alt="#">
-                  </div>
-               </a>
-               <div class="recommendation__list__item_info">
-                  <span class="tag"><?php echo $recPost['username']; ?></span>
-                  <h4><?php echo $recPost['title']; ?></h4>
-                  <p><?php echo substr($recPost['description'], 0, 150) ?>...<a href="<?php echo "./individualPage.php?id=" . $recPost['id']; ?>" class="recommendation__list__item_more">more</a></p>
-               </div>
-            </li>
-         <?php } ?>
+      <h2>Places Near Me</h2>
+      <ul class="recommendation__list" id='recommend'>
+
       </ul>
    </div>
 
+   </section>
    <?php require_once './__adminJobs.php' ?>
    <div style=" bottom:2rem;
                   display:flex;
@@ -309,6 +296,37 @@ require_once './__loginAndSignupErrorMsg.php';
          document.title = "Passion Seekers | " + postTitle.textContent;
       }, 9000)
    </script>
+
+<script src="scripts/jquery.min.js"></script>
+
+<script>
+      getLocation()
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  var long = position.coords.latitude ;
+  var lat = position.coords.longitude;
+  $.ajax({
+        url: "__recc.php",
+        type: "POST",
+        data: {
+            'long' : long,
+            'lat' : lat,
+            'recomend' : 'true'},
+        success:function(response){
+            $('#recommend').html(response);
+        }
+  });
+
+}
+</script>
 </body>
 
 </html>

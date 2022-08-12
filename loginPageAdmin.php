@@ -76,7 +76,7 @@ if ((isset($_SESSION['username'])) && !empty($_SESSION['username'])) {
          }
       }
 
-      if ($err_password || $err_username) {
+      if (isset($err_password) || isset($err_username)) {
          $err_login = true;
       } elseif ($loginFailed = true || $loginFailedUsers = true || $loginFailedPassword = true) {
          $loginAuthenticationFalied = true;
@@ -150,7 +150,9 @@ if ((isset($_SESSION['username'])) && !empty($_SESSION['username'])) {
                   <input type="checkbox" id="remember" name="remember__me">
 
                   <?php
+                  if(isset($remember_me)){
                   echo $remember_me;
+                  }
                   ?>
 
                </div>
@@ -170,7 +172,7 @@ if ((isset($_SESSION['username'])) && !empty($_SESSION['username'])) {
                   right:20px;
          ">
             <?php
-            if ($err_login) {
+            if (isset($err_login)) {
                displayError($err_login);
             } elseif ($loginAuthenticationFalied) {
                displayError(true, "Invalid Username or Password !");

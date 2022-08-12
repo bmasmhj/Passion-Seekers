@@ -4,7 +4,7 @@ $db_host = 'localhost';
 $db_user = 'root';
 $db_password = "";
 $db_name = 'db_passion_seekers';
-$con = mysqli_connect('localhost','root','','test');
+$con = mysqli_connect('localhost','root','','db_passion_seekers');
 //database connection
 $connection = new mysqli($db_host, $db_user, $db_password, $db_name);
 $connection_status = $connection->connect_errno == 0 ? "Connected" : "Not Connected";

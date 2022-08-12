@@ -37,6 +37,7 @@ require_once './__loginAndSignupErrorMsg.php';
 
    <?php
    //fetchhing users info
+   $err = [] ;
    if ($_SESSION['admin'] == true) {
       $query = mysqlCheckAdminsUsername($_SESSION['username']);
    } else {

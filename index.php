@@ -148,60 +148,17 @@ require_once './__connection.php';
    </div>
 
    <hr>
-   <div class="activity">
-      <?php //echo mysqlGetPostsForExploreAndActivities('activity') 
-      ?>
-      <h2>Activity</h2>
-      <div class="activity_content">
-         <div class="activity_content_blogs">
 
-            <?php
-            $queryToGetActivities = mysqlGetPostsForExploreAndActivities('activity');
-            $activitiesFormDatabaseAsPost = $connection->query($queryToGetActivities);
-            $arrayOfLocationForActivities = [];
 
-            while ($row = $activitiesFormDatabaseAsPost->fetch_assoc()) {
-               array_push($arrayOfLocationForActivities, $row);
-            }
-            ?>
+   <section style='padding:30px'>
+      <div class="recommendation recommendation--medium">
+         <h2>Places Near Me</h2>
+         <ul class="recommendation__list" id='recommend'>
 
-            <?php
-            if (count($arrayOfLocationForActivities) >= 11) {
-               foreach ($arrayOfLocationForActivities as $index => $location) {
-                  if ($index == 2 || $index == 3 || $index == 6) {
-            ?>
-                     <div class="activity_content_blog activity_content_blog--big">
-                        <div class="activity_content_blog_image">
-                           <img src="<?php echo './images/posts/' . $location['image'] ?>" alt="image">
-                        </div>
-
-                        <div class="activity_content_blog_info">
-                           <h2><?php echo $location['title']; ?></h2>
-                           <p><?php echo substr($location['description'], 0, 180) . "..." ?><a href="<?php echo "./individualPage.php?id=" . $location['id'] ?>" style="color:var(--blue); text-decoration:underline;">more</a></p>
-                        </div>
-                     </div>
-                  <?php
-                  } else {
-                  ?>
-                     <div class="activity_content_blog">
-                        <div class="activity_content_blog_image">
-                           <img src="<?php echo './images/posts/' . $location['image'] ?>" alt="image">
-                        </div>
-
-                        <div class="activity_content_blog_info">
-                           <h2><?php echo $location['title']; ?></h2>
-                           <p><?php echo substr($location['description'], 0, 180) . "..." ?><a href="<?php echo "./individualPage.php?id=" . $location['id'] ?>" style="color:var(--blue); text-decoration:underline;">more</a></p>
-                        </div>
-                     </div>
-            <?php
-                  }
-               }
-            }
-            ?>
-
-         </div>
+         </ul>
       </div>
-   </div>
+
+   </section>
    <hr>
 
    <footer>
@@ -270,5 +227,35 @@ require_once './__connection.php';
    <?php require_once './__adminJobs.php' ?>
    <script src="./scripts/src.js"></script>
    <script src="./scripts/individualPage.js"></script>
+   <script src="scripts/jquery.min.js"></script>
+
+<script>
+      getLocation()
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  var long = position.coords.latitude ;
+  var lat = position.coords.longitude;
+  $.ajax({
+        url: "__recc.php",
+        type: "POST",
+        data: {
+            'long' : long,
+            'lat' : lat,
+            'recomend' : 'true'},
+        success:function(response){
+            $('#recommend').html(response);
+        }
+  });
+
+}
+</script>
 </body>
 </html>

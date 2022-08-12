@@ -35,6 +35,7 @@ require_once './__loginAndSignupErrorMsg.php';
       $id = $_GET['id'];
    }
 
+   $err = [] ;
    //when user modify the content and tries to update it.
    if (isset($_POST['update'])) {
 
